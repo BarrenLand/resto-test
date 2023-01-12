@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('detail');
+            $table->integer('phone');
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }

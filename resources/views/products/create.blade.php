@@ -35,6 +35,25 @@
                     <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail"></textarea>
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Phone:</strong>
+                    <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                </div>
+            </div>
+            <div class="mb-6">
+                <label class="flex flex-col block">
+                    <span class=""> Close</span>
+                    <input type="radio" value="0" name="status" />
+                    <span class=""> Open</span>
+                    <input type="radio" value="1" name="status" />
+                </label>
+                @error('status')
+                <div class="flex items-center text-sm text-red-600">
+                    {{ $message }}
+                </div>
+                @enderror
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                     <button type="submit" class="btn btn-primary">Submit</button>
             </div>

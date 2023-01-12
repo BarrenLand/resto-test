@@ -52,6 +52,8 @@ class ProductController extends Controller
         request()->validate([
             'name' => 'required',
             'detail' => 'required',
+            'phone' => 'required|numeric',
+            'status' => 'required|boolean:0,1,true,false'
         ]);
     
         Product::create($request->all());
@@ -94,6 +96,8 @@ class ProductController extends Controller
          request()->validate([
             'name' => 'required',
             'detail' => 'required',
+            'phone' => 'required',
+            'status' => 'required|boolean:0,1,true,false'
         ]);
     
         $product->update($request->all());
